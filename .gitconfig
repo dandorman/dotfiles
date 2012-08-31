@@ -1,0 +1,31 @@
+[user]
+	name = Dan Dorman
+	email = dan.dorman@gmail.com
+[alias]
+	st = status
+	co = checkout
+	ci = commit
+	br = branch
+	di = diff
+	s = status --short
+	checkout-by-date = "!f() { time=$2; [ ! $time ] && time=\"00:00:00\"; git checkout $(git log -1 --before=\"$1 $time\" --oneline | cut -f1 -d\" \"); }; f"
+	d = diff -w
+	current = symbolic-ref --short HEAD
+	g = grep
+[color]
+	ui = true
+[core]
+	excludesfile = ~/.gitignore
+	editor = /usr/bin/vim
+[rerere]
+	enabled = 1
+[ci]
+  url  = https://ci.ahncloud.com/job/Connect%20-%20ddorman/
+  user  = alliance
+  password  = Broken-Dragon
+  email  = ddorman@alliancehealth.com
+
+[browser "gitscm"]
+	cmd = /bin/sh -c 'open http://git-scm.com/docs/$(basename $1 .html)' --
+[help]
+	browser = gitscm
