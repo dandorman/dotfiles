@@ -28,7 +28,7 @@ if [ -f /opt/local/etc/bash_completion ]; then
   . /opt/local/etc/bash_completion
 fi
 
-. $HOME/.shell/all.sh
+. $HOME/dotfiles/shell/all.sh
 
 shopt -s globstar autocd
 

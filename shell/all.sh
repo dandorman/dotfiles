@@ -1,11 +1,11 @@
 #!/bin/sh
 
-source $HOME/.shell/ah.sh
-source $HOME/.shell/alias.sh
-source $HOME/.shell/config-bin.sh
-source $HOME/.shell/growl.sh
-source $HOME/.shell/js-test-driver.sh
-source $HOME/.shell/path.sh
-source $HOME/.shell/rbenv.sh
-source $HOME/.shell/ruby.sh
+source $HOME/dotfiles/shell/ah.sh
+source $HOME/dotfiles/shell/alias.sh
+source $HOME/dotfiles/shell/config-bin.sh
+source $HOME/dotfiles/shell/growl.sh
+source $HOME/dotfiles/shell/js-test-driver.sh
+source $HOME/dotfiles/shell/path.sh
+source $HOME/dotfiles/shell/rbenv.sh
+source $HOME/dotfiles/shell/ruby.sh
 
