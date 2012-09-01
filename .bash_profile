@@ -16,7 +16,7 @@ function color_wrap {
 }
 
 # "stock" PS1: \h:\W \u\$ (jem:connect ddorman$)
-PS1="$(color_wrap $COLOR_RED_BOLD '\u@\h'):\w$(color_wrap $COLOR_YELLOW '$(parse_git_branch)') ⌘  "
+PS1="\w$(color_wrap $COLOR_YELLOW '$(parse_git_branch)')‣ "
 
 # git completion stuff
 
