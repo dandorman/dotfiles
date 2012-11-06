@@ -31,3 +31,6 @@ fi
 . $HOME/dotfiles/shell/all.sh
 
 shopt -s globstar autocd
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
