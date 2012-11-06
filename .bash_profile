@@ -18,17 +18,12 @@ function color_wrap {
 # "stock" PS1: \h:\W \u\$ (jem:connect ddorman$)
 PS1="\w$(color_wrap $COLOR_YELLOW '$(parse_git_branch)')‣ "
 
-# git completion stuff
+. $HOME/dotfiles/shell/all.sh
 
+# git completion stuff
 if [ -f ~/.git-completion.bash ]; then
   source ~/.git-completion.bash
 fi
-
-if [ -f /opt/local/etc/bash_completion ]; then
-  . /opt/local/etc/bash_completion
-fi
-
-. $HOME/dotfiles/shell/all.sh
 
 shopt -s globstar autocd
 
