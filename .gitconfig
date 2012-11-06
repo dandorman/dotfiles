@@ -12,6 +12,8 @@
 	d = diff -w
 	current = symbolic-ref --short HEAD
 	g = grep
+	a = add
+	pul = pull
 [color]
 	ui = true
 [core]
@@ -29,3 +31,5 @@
 	cmd = /bin/sh -c 'open http://git-scm.com/docs/$(basename $1 .html)' --
 [help]
 	browser = gitscm
+[push]
+	default = tracking
