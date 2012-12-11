@@ -8,6 +8,6 @@ source $HOME/dotfiles/shell/growl.sh
 source $HOME/dotfiles/shell/node.sh
 source $HOME/dotfiles/shell/npm-completion.sh
 source $HOME/dotfiles/shell/path.sh
-source $HOME/dotfiles/shell/rbenv.sh
+# source $HOME/dotfiles/shell/rbenv.sh
 source $HOME/dotfiles/shell/ruby.sh
 

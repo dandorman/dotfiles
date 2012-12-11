@@ -26,6 +26,3 @@ function color_wrap {
 
 # "stock" PS1: \h:\W \u\$ (jem:connect ddorman$)
 PS1="\w$(color_wrap $COLOR_YELLOW '$(__git_ps1 " (%s)")')‣ "
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
