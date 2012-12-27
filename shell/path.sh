@@ -5,8 +5,6 @@
 PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
 PATH=/usr/local/heroku/bin:$PATH
 PATH=$(npm bin -g 2> /dev/null):$PATH
-PATH=$HOME/.rbenv/bin:$PATH
-source "$HOME/dotfiles/shell/rbenv.sh"
 PATH=$HOME/bin:$PATH
 PATH=./node_modules/.bin:$PATH
 export PATH=./bin:$PATH
