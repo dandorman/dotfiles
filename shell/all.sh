@@ -1,6 +1,7 @@
 #!/bin/sh
 
 source $HOME/dotfiles/shell/alias.sh
+source $HOME/dotfiles/shell/functions.sh
 source $HOME/dotfiles/shell/config-bin.sh
 
 source $HOME/dotfiles/shell/ah.sh
