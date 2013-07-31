@@ -35,3 +35,5 @@
 	browser = gitscm
 [push]
 	default = tracking
+[pull]
+	rebase = true
