@@ -1,28 +1,17 @@
-shopt -s globstar autocd
+# system default: /usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
+# rearranged to make /usr/local/bin more prominent
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
+PATH=/usr/local/heroku/bin:$PATH
+PATH=$(npm bin -g 2>/dev/null):$PATH
+PATH=$HOME/bin:$PATH
+export PATH=.git/safe/../../bin:$PATH
 
-. $HOME/dotfiles/shell/all.sh
-
-### git
-
-if [ -f $HOME/.git-completion.bash ]; then
-  source $HOME/.git-completion.bash
+bashrc="$HOME/.bashrc"
+if [ -f $bashrc ]; then
+  source $bashrc
 fi
 
-if [ -f $HOME/.git-prompt.sh ]; then
-  source $HOME/.git-prompt.sh
+chruby_auto=/usr/local/share/chruby/auto.sh
+if [ -f $chruby_auto ]; then
+  source $chruby_auto
 fi
-
-### prompt
-
-COLOR_RESET='\e[0m'
-COLOR_RED_BOLD='\e[1;31m'
-COLOR_YELLOW='\e[0;33m'
-
-# $1: color code
-# $2: text to wrap
-function color_wrap {
-  echo "\["$1"\]"$2"\[$COLOR_RESET\]"
-}
-
-# "stock" PS1: \h:\W \u\$ (jem:connect ddorman$)
-PS1="\w$(color_wrap $COLOR_YELLOW '$(__git_ps1 " (%s)")')‣ "

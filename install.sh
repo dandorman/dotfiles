@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DIR=$(cd -P "$(dirname "${BASH_SOURCE[0]}")" && pwd)
-FILES="bash_profile gemrc gitconfig githelpers gitignore tmux.conf zshrc"
+FILES="bashrc bash_profile gemrc gitconfig githelpers gitignore"
 
 for file in $FILES; do
   link=$HOME/.$file

@@ -16,6 +16,7 @@
 	pul = pull
 	l = !source $HOME/.githelpers && pretty_git_log
 	div = divergence
+	gerrit-submit = !source $HOME/.githelpers && gerrit_submit
 [color]
 	ui = true
 [core]

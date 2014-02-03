@@ -38,3 +38,18 @@ pretty_git_log() {
         less -FXRS
 }
 
+gerrit_submit() {
+    local_ref=$(git symbolic-ref HEAD)
+    local_name=${local_ref##refs/heads/}
+    remote=$(git config branch."$local_name".remote || echo origin)
+    remote_ref=$(git config branch."$local_name".merge || git config branch.master.merge)
+    remote_name=${remote_ref##refs/heads/}
+    remote_review_ref="refs/for/$remote_name"
+
+    r=""
+    for reviewer in $@; do
+        r="$r --reviewer=$reviewer"
+    done
+
+    git push --receive-pack="gerrit receive-pack $r" $remote HEAD:$remote_review_ref
+}
