@@ -27,7 +27,7 @@ filetype off
 " bundles
 
 runtime bundle/vim-pathogen/autoload/pathogen.vim
-execute pathogen#incubate()
+execute pathogen#infect('bundle/{}')
 syntax on
 filetype plugin indent on
 
