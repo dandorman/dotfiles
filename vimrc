@@ -1,6 +1,10 @@
 " bundles
 
+"=bundle AndrewRadev/splitjoin.vim
+"=bundle godlygeek/tabular
 "=bundle guns/vim-clojure-static
+"=bundle guns/vim-sexp
+"=bundle jelera/vim-javascript-syntax
 "=bundle kchmck/vim-coffee-script
 "=bundle kien/ctrlp.vim
 "=bundle mustache/vim-mode
