@@ -1,14 +1,15 @@
 " bundles
 
 "=bundle AndrewRadev/splitjoin.vim
+"=bundle godlygeek/csapprox
 "=bundle godlygeek/tabular
 "=bundle guns/vim-clojure-static
 "=bundle guns/vim-sexp
 "=bundle jelera/vim-javascript-syntax
 "=bundle kchmck/vim-coffee-script
 "=bundle kien/ctrlp.vim
+"=bundle morhetz/gruvbox
 "=bundle mustache/vim-mode
-"=bundle noahfrederick/vim-hemisu
 "=bundle othree/html5.vim
 "=bundle slim-template/vim-slim
 "=bundle tommcdo/vim-exchange
@@ -91,6 +92,10 @@ nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 " search
 nnoremap <Leader>g :Ag<SPACE>
+
+" splitjoin
+nnoremap <Leader>sj :SplitjoinSplit<CR>
+nnoremap <Leader>sk :SplitjoinJoin<CR>
 
 " abbreviations
 
