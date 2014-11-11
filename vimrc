@@ -6,25 +6,28 @@
 "=bundle guns/vim-clojure-static
 "=bundle guns/vim-sexp
 "=bundle jelera/vim-javascript-syntax
-"=bundle kchmck/vim-coffee-script
+"=bundle kana/vim-textobj-user
 "=bundle kien/ctrlp.vim
 "=bundle morhetz/gruvbox
-"=bundle mustache/vim-mode
+"=bundle mustache/vim-mustache-handlebars
+"=bundle nelstrom/vim-textobj-rubyblock
 "=bundle othree/html5.vim
-"=bundle slim-template/vim-slim
 "=bundle tommcdo/vim-exchange
 "=bundle tpope/vim-commentary
+"=bundle tpope/vim-endwise
 "=bundle tpope/vim-eunuch
 "=bundle tpope/vim-fireplace
 "=bundle tpope/vim-fugitive
 "=bundle tpope/vim-pathogen
 "=bundle tpope/vim-rails
 "=bundle tpope/vim-repeat
+"=bundle tpope/vim-rsi
 "=bundle tpope/vim-sensible
 "=bundle tpope/vim-sleuth
 "=bundle tpope/vim-surround
 "=bundle tpope/vim-vinegar
 "=bundle vim-ruby/vim-ruby
+"=bundle vim-scripts/dbext.vim
 
 set nocompatible
 filetype off
@@ -71,6 +74,11 @@ endfunction
 
 autocmd BufWritePre * :call TrimWhiteSpace()
 autocmd FileWritePre * :call TrimWhiteSpace()
+
+augroup filetype_markdown
+  autocmd!
+  autocmd BufNewFile,BufReadPost *.md setlocal filetype=markdown
+augroup END
 
 " mappings
 
