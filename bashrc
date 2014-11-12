@@ -1,4 +1,4 @@
-shopt -s globstar autocd
+shopt -s globstar autocd checkwinsize
 
 export CLICOLOR=1
 export EDITOR=vim
