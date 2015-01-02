@@ -39,3 +39,9 @@ function color_wrap {
 
 # "stock" PS1: \h:\W \u\$ (jem:connect ddorman$)
 PS1="\w$(color_wrap $COLOR_YELLOW '$(__git_ps1 " %s")') "
+
+# clojure
+
+# More: http://swannodette.github.io/2014/12/22/waitin/
+export LEIN_FAST_TRAMPOLINE=y
+alias cljsbuild="lein trampoline cljsbuild $@"
