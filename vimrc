@@ -109,12 +109,6 @@ nnoremap <Leader>sk :SplitjoinJoin<CR>
 nnoremap <Leader>r :execute "!clear && ./bin/rspec %:" . line(".")<CR>
 nnoremap <Leader>R :execute "!clear && ./bin/rspec %"<CR>
 
-" abbreviations
-
-iabbrev dbg require "ruby-debug"; Debugger.start; debugger; 1
-iabbrev bbg require "byebug"; byebug
-iabbrev doctype DOCTYPE
-
 " local overrides
 
 let s:local_config = $HOME . "/.vimrc.local"
