@@ -10,6 +10,7 @@
 "=bundle kien/ctrlp.vim
 "=bundle morhetz/gruvbox
 "=bundle mustache/vim-mustache-handlebars
+"=bundle nelstrom/vim-mac-classic-theme
 "=bundle nelstrom/vim-textobj-rubyblock
 "=bundle othree/html5.vim
 "=bundle tommcdo/vim-exchange
