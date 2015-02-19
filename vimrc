@@ -1,6 +1,7 @@
 " bundles
 
 "=bundle AndrewRadev/splitjoin.vim
+"=bundle gcmt/wildfire.vim
 "=bundle godlygeek/csapprox
 "=bundle godlygeek/tabular
 "=bundle guns/vim-clojure-static
