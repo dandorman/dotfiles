@@ -19,6 +19,7 @@
 "=bundle tpope/vim-eunuch
 "=bundle tpope/vim-fireplace
 "=bundle tpope/vim-fugitive
+"=bundle tpope/vim-haystack
 "=bundle tpope/vim-pathogen
 "=bundle tpope/vim-rails
 "=bundle tpope/vim-repeat
