@@ -7,12 +7,12 @@
 "=bundle guns/vim-sexp
 "=bundle jelera/vim-javascript-syntax
 "=bundle kana/vim-textobj-user
-"=bundle kien/ctrlp.vim
 "=bundle morhetz/gruvbox
 "=bundle mustache/vim-mustache-handlebars
 "=bundle nelstrom/vim-mac-classic-theme
 "=bundle nelstrom/vim-textobj-rubyblock
 "=bundle othree/html5.vim
+"=bundle thoughtbot/pick.vim
 "=bundle tommcdo/vim-exchange
 "=bundle tpope/vim-commentary
 "=bundle tpope/vim-endwise
@@ -57,8 +57,6 @@ set wildignore=.git,public/images,tmp,vendor,*.gif,*.jpeg,*.jpg,*.png
 
 if executable('ag')
   set grepprg=ag\ --nogroup\ --nocolor
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-  let g:ctrlp_use_caching = 0
 endif
 
 command! -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
@@ -109,6 +107,13 @@ nnoremap <Leader>sk :SplitjoinJoin<CR>
 " run tests
 nnoremap <Leader>r :execute "!clear && ./bin/rspec %:" . line(".")<CR>
 nnoremap <Leader>R :execute "!clear && ./bin/rspec %"<CR>
+
+" pick.vim
+nnoremap <Leader>p :call PickFile()<CR>
+nnoremap <Leader>s :call PickFileSplit()<CR>
+nnoremap <Leader>v :call PickFileVerticalSplit()<CR>
+nnoremap <Leader>t :call PickFileTab()<CR>
+nnoremap <Leader>b :call PickBuffer()<CR>
 
 " local overrides
 
