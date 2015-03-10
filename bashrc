@@ -31,6 +31,7 @@ fi
 
 ### prompt
 
+COLOR_BOLD='\e[1m'
 COLOR_RESET='\e[0m'
 COLOR_RED_BOLD='\e[1;31m'
 COLOR_YELLOW='\e[0;33m'
@@ -43,7 +44,7 @@ function colorize {
 
 # $1: text to wrap
 function embolden {
-  echo "\033[1m"$1"\033[0m"
+  colorize $COLOR_BOLD $1
 }
 
 # "stock" PS1: \h:\W \u\$ (jem:connect ddorman$)
