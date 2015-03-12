@@ -10,17 +10,3 @@ fi
 if [ ! -h $HOME/.nvimrc ]; then
   ln -s $HOME/.vimrc $HOME/.nvimrc
 fi
-
-if [ ! -e $HOME/.terminfo/78/xterm-256color-italic ]; then
-  tic $HOME/.dotfiles/hooks/xterm-256color-italic.terminfo
-  cat <<EOS
-In iTerm:
-
-  1. Visit the “Terminal” tab of a given theme.
-  2. Fill in “Report Terminal Type:” with `xterm-256color-italic`.
-
-Then restart iTerm.
-
-See https://alexpearce.me/2014/05/italics-in-iterm2-vim-tmux/ for more info.
-EOS
-fi
