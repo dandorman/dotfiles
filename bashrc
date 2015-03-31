@@ -3,6 +3,11 @@ shopt -s globstar autocd checkwinsize
 export CLICOLOR=1
 export EDITOR=vim
 
+export HISTCONTROL=ignoreboth
+export HISTFILESIZE=1000000
+export HISTIGNORE="bg:fg:history:jobs:ls"
+export HISTSIZE=1000000
+
 ### chruby
 
 source /usr/local/share/chruby/chruby.sh
