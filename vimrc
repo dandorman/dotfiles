@@ -105,7 +105,7 @@ nnoremap <Leader>sj :SplitjoinSplit<CR>
 nnoremap <Leader>sk :SplitjoinJoin<CR>
 
 " run tests
-nnoremap <Leader>r :execute "!clear && ./bin/rspec %:" . line(".")<CR>
+nnoremap <Leader>r :execute "!clear && ./bin/rspec %\\:" . line(".")<CR>
 nnoremap <Leader>R :execute "!clear && ./bin/rspec %"<CR>
 
 " pick.vim
