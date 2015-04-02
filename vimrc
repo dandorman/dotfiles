@@ -1,17 +1,13 @@
 " bundles
 
-"=bundle AndrewRadev/splitjoin.vim
 "=bundle godlygeek/csapprox
 "=bundle godlygeek/tabular
 "=bundle guns/vim-clojure-static
 "=bundle guns/vim-sexp
-"=bundle jelera/vim-javascript-syntax
 "=bundle kana/vim-textobj-user
 "=bundle morhetz/gruvbox
-"=bundle mustache/vim-mustache-handlebars
 "=bundle nelstrom/vim-mac-classic-theme
 "=bundle nelstrom/vim-textobj-rubyblock
-"=bundle othree/html5.vim
 "=bundle thoughtbot/pick.vim
 "=bundle tommcdo/vim-exchange
 "=bundle tpope/vim-commentary
@@ -24,11 +20,11 @@
 "=bundle tpope/vim-repeat
 "=bundle tpope/vim-rsi
 "=bundle tpope/vim-sensible
+"=bundle tpope/vim-sexp-mappings-for-regular-people
 "=bundle tpope/vim-sleuth
 "=bundle tpope/vim-surround
 "=bundle tpope/vim-vinegar
 "=bundle vim-ruby/vim-ruby
-"=bundle vim-scripts/dbext.vim
 
 set nocompatible
 filetype off
@@ -99,10 +95,6 @@ nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 " search
 nnoremap <Leader>g :Ag<SPACE>
-
-" splitjoin
-nnoremap <Leader>sj :SplitjoinSplit<CR>
-nnoremap <Leader>sk :SplitjoinJoin<CR>
 
 " run tests
 nnoremap <Leader>r :execute "!clear && ./bin/rspec %\\:" . line(".")<CR>
