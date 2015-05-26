@@ -1,5 +1,6 @@
 " bundles
 
+"=bundle gabesoft/vim-ags
 "=bundle godlygeek/csapprox
 "=bundle godlygeek/tabular
 "=bundle guns/vim-clojure-static
@@ -91,14 +92,14 @@ nnoremap <Leader>ev :vsplit $MYVIMRC<CR>
 nnoremap <Leader>sv :source $MYVIMRC<CR>
 
 " grep word under cursor
-nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+nnoremap K :Ags<CR>
 
 " search
 nnoremap <Leader>g :Ag<SPACE>
 
 " run tests
-nnoremap <Leader>r :execute "!clear && ./bin/rspec %\\:" . line(".")<CR>
-nnoremap <Leader>R :execute "!clear && ./bin/rspec %"<CR>
+nnoremap <Leader>r :execute "!clear && bin/rspec %\\:" . line(".")<CR>
+nnoremap <Leader>R :execute "!clear && bin/rspec %"<CR>
 
 " pick.vim
 nnoremap <Leader>p :call PickFile()<CR>
