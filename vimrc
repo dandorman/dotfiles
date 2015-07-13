@@ -108,6 +108,10 @@ nnoremap <Leader>v :call PickFileVerticalSplit()<CR>
 nnoremap <Leader>t :call PickFileTab()<CR>
 nnoremap <Leader>b :call PickBuffer()<CR>
 
+" extract let
+nnoremap <Leader>l :s/\(\w\+\)\s*=\s*\(.*\)$/let(:\1) { \2 }<CR>
+nnoremap <Leader>L :s/let(:\([^)]\+\))\s*{\s*\(.*\)\s*}/\1 = \2<CR>:s/\s\+$//e<CR>
+
 " local overrides
 
 let s:local_config = $HOME . "/.vimrc.local"
