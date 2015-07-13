@@ -98,8 +98,8 @@ nnoremap K :Ags<CR>
 nnoremap <Leader>g :Ag<SPACE>
 
 " run tests
-nnoremap <Leader>r :execute "!clear && bin/rspec %\\:" . line(".")<CR>
-nnoremap <Leader>R :execute "!clear && bin/rspec %"<CR>
+nnoremap <Leader>r :execute "!clear && rspec %\\:" . line(".")<CR>
+nnoremap <Leader>R :execute "!clear && rspec %"<CR>
 
 " pick.vim
 nnoremap <Leader>p :call PickFile()<CR>
