@@ -10,3 +10,13 @@ fi
 if [ ! -h $HOME/.nvimrc ]; then
   ln -s $HOME/.vimrc $HOME/.nvimrc
 fi
+
+/usr/libexec/PlistBuddy $HOME/Library/Preferences/com.googlecode.iterm2.plist -c "Print ':Custom Color Presets:foo'" &>/dev/null
+if [ $? -ne 0 ]; then
+  echo "Installing hybrid color presets for iTerm"
+  url=https://gist.githubusercontent.com/dandorman/0eacbd1465c5832c22ca/raw/eff9862a4e74dd3350688d96ced362a5da6635a8/hybrid.itermcolors
+  tempfile=/tmp/hybrid.itermcolors
+  curl -s $url > $tempfile
+  open $tempfile
+  rm $tempfile
+fi
