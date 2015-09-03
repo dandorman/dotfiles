@@ -71,6 +71,9 @@ endfunction
 autocmd BufWritePre * :call TrimWhiteSpace()
 autocmd FileWritePre * :call TrimWhiteSpace()
 
+autocmd BufWinEnter *.* silent loadview
+autocmd BufWinLeave *.* mkview
+
 augroup filetype_markdown
   autocmd!
   autocmd BufNewFile,BufReadPost *.md setlocal filetype=markdown
