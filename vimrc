@@ -6,6 +6,7 @@
 "=bundle guns/vim-clojure-static
 "=bundle guns/vim-sexp
 "=bundle kana/vim-textobj-user
+"=bundle morhetz/gruvbox
 "=bundle nelstrom/vim-mac-classic-theme
 "=bundle nelstrom/vim-textobj-rubyblock
 "=bundle thoughtbot/pick.vim
@@ -25,7 +26,6 @@
 "=bundle tpope/vim-surround
 "=bundle tpope/vim-vinegar
 "=bundle vim-ruby/vim-ruby
-"=bundle w0ng/vim-hybrid
 
 set nocompatible
 filetype off
