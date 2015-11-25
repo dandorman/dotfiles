@@ -8,23 +8,8 @@ export HISTFILESIZE=1000000
 export HISTIGNORE="bg:fg:history:jobs:ls"
 export HISTSIZE=1000000
 
-### chruby
-
-source /usr/local/share/chruby/chruby.sh
-
-### docker
-
-if [[ -x $(which dinghy) ]]; then
-  export DOCKER_HOST=tcp://127.0.0.1:2376
-  export DOCKER_CERT_PATH=/Users/ddorman/.dinghy/certs
-  export DOCKER_TLS_VERIFY=1
-elif [[ -x $(which docker) ]]; then
-  export DOCKER_HOST=tcp://192.168.59.103:2376
-  export DOCKER_CERT_PATH=/Users/dan/.boot2docker/certs/boot2docker-vm
-  export DOCKER_TLS_VERIFY=1
-fi
-
-### git
+################################################################################
+# Git
 
 if [ -f $HOME/.git-completion.bash ]; then
   source $HOME/.git-completion.bash
@@ -34,7 +19,8 @@ if [ -f $HOME/.git-prompt.sh ]; then
   source $HOME/.git-prompt.sh
 fi
 
-### prompt
+################################################################################
+# Prompt
 
 COLOR_BOLD='\e[1m'
 COLOR_RESET='\e[0m'
@@ -55,8 +41,20 @@ function embolden {
 # "stock" PS1: \h:\W \u\$ (jem:connect ddorman$)
 PS1="$(embolden "\w")$(colorize $COLOR_YELLOW '$(__git_ps1 " %s")') "
 
-# clojure
+################################################################################
+# Clojure
 
 # More: http://swannodette.github.io/2014/12/22/waitin/
 export LEIN_FAST_TRAMPOLINE=y
 alias cljsbuild="lein trampoline cljsbuild $@"
+
+################################################################################
+# Ruby
+
+source /usr/local/share/chruby/chruby.sh
+source /usr/local/share/gem_home/gem_home.sh
+
+################################################################################
+# Instructure
+
+alias bridge="cd $HOME/Code/bridge && gem_home . && export PATH=./bin:\$PATH"
