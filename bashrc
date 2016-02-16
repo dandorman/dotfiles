@@ -1,12 +1,14 @@
-shopt -s globstar autocd checkwinsize
+shopt -s globstar autocd checkwinsize histappend
 
 export CLICOLOR=1
 export EDITOR=vim
 
-export HISTCONTROL=ignoreboth
-export HISTFILESIZE=1000000
+# http://unix.stackexchange.com/questions/18212/bash-history-ignoredups-and-erasedups-setting-conflict-with-common-history#answer-18443
+export HISTCONTROL=ignoredups:erasedups
+export HISTFILESIZE=10000
 export HISTIGNORE="bg:fg:history:jobs:ls"
-export HISTSIZE=1000000
+export HISTSIZE=10000
+export PROMPT_COMMAND="history -n; history -w; history -c; history -r; $PROMT_COMMAND"
 
 ################################################################################
 # Git
