@@ -2,6 +2,8 @@ shopt -s globstar autocd checkwinsize histappend
 
 export CLICOLOR=1
 export EDITOR=vim
+export TERM_ITALICS=true
+
 ################################################################################
 # History
 
