@@ -45,7 +45,9 @@ set directory=$HOME/.vimswap,.
 set formatoptions=croqwanl
 set gdefault
 set hidden
+set ignorecase
 set list listchars=tab:»·,trail:·
+set smartcase
 set visualbell
 set wildmode=list:longest
 set wildignore=.git,public/images,tmp,vendor,*.gif,*.jpeg,*.jpg,*.png
