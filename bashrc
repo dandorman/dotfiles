@@ -2,6 +2,8 @@ shopt -s globstar autocd checkwinsize histappend
 
 export CLICOLOR=1
 export EDITOR=vim
+################################################################################
+# History
 
 # http://unix.stackexchange.com/questions/18212/bash-history-ignoredups-and-erasedups-setting-conflict-with-common-history#answer-18443
 export HISTCONTROL=ignoredups:erasedups
