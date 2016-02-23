@@ -5,6 +5,7 @@
 "=bundle godlygeek/tabular
 "=bundle guns/vim-clojure-static
 "=bundle guns/vim-sexp
+"=bundle jasonlong/vim-textobj-css
 "=bundle kana/vim-textobj-user
 "=bundle morhetz/gruvbox
 "=bundle nelstrom/vim-mac-classic-theme
