@@ -1,4 +1,4 @@
-shopt -s globstar autocd checkwinsize
+shopt -s globstar autocd checkwinsize cmdlist histappend
 
 export CLICOLOR=1
 export EDITOR=vim
@@ -9,10 +9,12 @@ alias ssh="TERM=xterm-256color ssh"
 ################################################################################
 # History
 
+# http://blog.sanctum.geek.nz/better-bash-history/
 export HISTCONTROL=ignoreboth
 export HISTFILESIZE=1000000
 export HISTIGNORE="bg:fg:history:jobs:ls:git status:git st:git s:git diff:git d"
 export HISTSIZE=1000000
+export HISTTIMEFORMAT="%F %T "
 
 ################################################################################
 # Git
