@@ -1,4 +1,4 @@
-shopt -s autocd checkwinsize cmdlist globstar histappend
+shopt -s autocd checkwinsize cmdhist globstar histappend
 
 export CLICOLOR=1
 export EDITOR=vim
