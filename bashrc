@@ -4,8 +4,6 @@ export CLICOLOR=1
 export EDITOR=vim
 export TERM_ITALICS=true
 
-alias ssh="TERM=xterm-256color ssh"
-
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi
