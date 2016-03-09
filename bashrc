@@ -6,6 +6,10 @@ export TERM_ITALICS=true
 
 alias ssh="TERM=xterm-256color ssh"
 
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
+
 ################################################################################
 # History
 
@@ -18,10 +22,6 @@ export HISTTIMEFORMAT="%F %T "
 
 ################################################################################
 # Git
-
-if [ -f $HOME/.git-completion.bash ]; then
-  source $HOME/.git-completion.bash
-fi
 
 if [ -f $HOME/.git-prompt.sh ]; then
   source $HOME/.git-prompt.sh
