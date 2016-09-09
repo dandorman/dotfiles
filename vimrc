@@ -122,6 +122,10 @@ nnoremap <Leader>L :s/let(:\([^)]\+\))\s*{\s*\(.*\)\s*}/\1 = \2<CR>:s/\s\+$//e<C
 nnoremap <Leader>> :tabn<CR>
 nnoremap <Leader>< :tabp<CR>
 
+" ruby stuff
+" tap 'n' inspect
+nnoremap <Leader>i a.tap { \|o\| warn "#{o.inspect}" }<ESC>F#
+
 " local overrides
 
 let s:local_config = $HOME . "/.vimrc.local"
