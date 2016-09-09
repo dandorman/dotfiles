@@ -17,6 +17,7 @@
 	l = !source $HOME/.githelpers && pretty_git_log
 	div = divergence
 	gerrit-submit = !source $HOME/.githelpers && gerrit_submit
+	chp = cherry-pick
 [color]
 	ui = true
 [core]
