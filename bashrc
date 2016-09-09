@@ -61,6 +61,11 @@ source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/gem_home/gem_home.sh
 
 ################################################################################
+# Rails
+
+export DISABLE_SPRING=1
+
+################################################################################
 # Instructure
 
 alias bridge="cd $HOME/Code/bridge && gem_home . && export PATH=./bin:\$PATH"
