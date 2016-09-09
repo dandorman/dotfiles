@@ -69,3 +69,6 @@ export DISABLE_SPRING=1
 # Instructure
 
 alias bridge="cd $HOME/Code/bridge && gem_home . && export PATH=./bin:\$PATH"
+
+export NVM_DIR="/Users/ddorman/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
