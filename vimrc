@@ -118,6 +118,10 @@ nnoremap <Leader>b :call PickBuffer()<CR>
 nnoremap <Leader>l :s/\(\w\+\)\s*=\s*\(.*\)$/let(:\1) { \2 }<CR>
 nnoremap <Leader>L :s/let(:\([^)]\+\))\s*{\s*\(.*\)\s*}/\1 = \2<CR>:s/\s\+$//e<CR>
 
+" tab navigation
+nnoremap <Leader>> :tabn<CR>
+nnoremap <Leader>< :tabp<CR>
+
 " local overrides
 
 let s:local_config = $HOME . "/.vimrc.local"
