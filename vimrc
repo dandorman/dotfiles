@@ -46,7 +46,6 @@ set directory=$HOME/.vimswap,.
 set formatoptions=croqwanl
 set gdefault
 set hidden
-set ignorecase
 set list listchars=tab:»·,trail:·
 set smartcase
 set visualbell
