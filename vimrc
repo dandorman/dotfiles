@@ -1,4 +1,5 @@
 "=plugin AlessandroYorba/Despacio
+"=plugin cespare/vim-toml
 "=plugin gabesoft/vim-ags
 "=plugin godlygeek/csapprox
 "=plugin godlygeek/tabular
