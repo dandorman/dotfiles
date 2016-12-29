@@ -65,8 +65,8 @@ function! TrimWhiteSpace()
   call setpos('.', l:cursor)
 endfunction
 
-autocmd BufWritePre * :call TrimWhiteSpace()
-autocmd FileWritePre * :call TrimWhiteSpace()
+" autocmd BufWritePre * :call TrimWhiteSpace()
+" autocmd FileWritePre * :call TrimWhiteSpace()
 
 autocmd BufWinEnter *.* silent loadview
 autocmd BufWinLeave *.* mkview
