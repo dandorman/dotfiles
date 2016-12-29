@@ -79,7 +79,7 @@ export NVM_DIR="$HOME/.nvm"
 ################################################################################
 # Instructure
 
-alias bridge="cd $HOME/Code/bridge && chruby \$(cat .ruby-version) && gem_home . && export PATH=\$(pwd)/bin:\$PATH"
+alias bridge="cd $HOME/Code/bridge && chruby \$(cat .ruby-version) && gem_home . && nvm use > /dev/null && export PATH=\$(pwd)/bin:\$PATH"
 
 
 export VAULT_ADDR=https://vault.insops.net
