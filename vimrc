@@ -1,40 +1,35 @@
-" bundles
-
-"=bundle gabesoft/vim-ags
-"=bundle godlygeek/csapprox
-"=bundle godlygeek/tabular
-"=bundle guns/vim-clojure-static
-"=bundle guns/vim-sexp
-"=bundle jasonlong/vim-textobj-css
-"=bundle kana/vim-textobj-user
-"=bundle morhetz/gruvbox
-"=bundle nelstrom/vim-mac-classic-theme
-"=bundle nelstrom/vim-textobj-rubyblock
-"=bundle thoughtbot/pick.vim
-"=bundle tommcdo/vim-exchange
-"=bundle tpope/vim-commentary
-"=bundle tpope/vim-endwise
-"=bundle tpope/vim-eunuch
-"=bundle tpope/vim-fireplace
-"=bundle tpope/vim-fugitive
-"=bundle tpope/vim-pathogen
-"=bundle tpope/vim-rails
-"=bundle tpope/vim-repeat
-"=bundle tpope/vim-rsi
-"=bundle tpope/vim-sensible
-"=bundle tpope/vim-sexp-mappings-for-regular-people
-"=bundle tpope/vim-sleuth
-"=bundle tpope/vim-surround
-"=bundle tpope/vim-vinegar
-"=bundle vim-ruby/vim-ruby
+"=plugin AlessandroYorba/Despacio
+"=plugin gabesoft/vim-ags
+"=plugin godlygeek/csapprox
+"=plugin godlygeek/tabular
+"=plugin guns/vim-clojure-static
+"=plugin guns/vim-sexp
+"=plugin jasonlong/vim-textobj-css
+"=plugin jelera/vim-javascript-syntax
+"=plugin kana/vim-textobj-user
+"=plugin morhetz/gruvbox
+"=plugin nelstrom/vim-mac-classic-theme
+"=plugin nelstrom/vim-textobj-rubyblock
+"=plugin thoughtbot/pick.vim
+"=plugin tommcdo/vim-exchange
+"=plugin tpope/vim-commentary
+"=plugin tpope/vim-endwise
+"=plugin tpope/vim-eunuch
+"=plugin tpope/vim-fireplace
+"=plugin tpope/vim-fugitive
+"=plugin tpope/vim-rails
+"=plugin tpope/vim-repeat
+"=plugin tpope/vim-rsi
+"=plugin tpope/vim-sensible
+"=plugin tpope/vim-sexp-mappings-for-regular-people
+"=plugin tpope/vim-sleuth
+"=plugin tpope/vim-surround
+"=plugin tpope/vim-vinegar
+"=plugin vim-ruby/vim-ruby
 
 set nocompatible
 filetype off
 
-" bundles
-
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-execute pathogen#infect('bundle/{}')
 syntax on
 filetype plugin indent on
 
