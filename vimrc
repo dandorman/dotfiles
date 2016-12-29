@@ -10,6 +10,7 @@
 "=plugin morhetz/gruvbox
 "=plugin nelstrom/vim-mac-classic-theme
 "=plugin nelstrom/vim-textobj-rubyblock
+"=plugin rust-lang/rust.vim
 "=plugin thoughtbot/pick.vim
 "=plugin tommcdo/vim-exchange
 "=plugin tpope/vim-commentary
