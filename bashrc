@@ -82,5 +82,4 @@ export NVM_DIR="$HOME/.nvm"
 alias bridge="cd $HOME/Code/bridge && chruby \$(cat .ruby-version) && gem_home . && export PATH=\$(pwd)/bin:\$PATH"
 
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 export VAULT_ADDR=https://vault.insops.net
