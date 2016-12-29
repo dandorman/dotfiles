@@ -9,6 +9,11 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
 fi
 
 ################################################################################
+# Aliases
+
+alias ssh="TERM=xterm-256color ssh"
+
+################################################################################
 # History
 
 # http://blog.sanctum.geek.nz/better-bash-history/
