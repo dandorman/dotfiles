@@ -80,8 +80,10 @@ export DISABLE_SPRING=1
 ################################################################################
 # JavaScript
 
-export NVM_DIR="$HOME/.nvm"
-. "$(brew --prefix nvm)/nvm.sh"
+if [ -a "$(brew --prefix nvm)/nvm.sh" ]; then
+  export NVM_DIR="$HOME/.nvm"
+  . "$(brew --prefix nvm)/nvm.sh"
+fi
 
 ################################################################################
 # Instructure
