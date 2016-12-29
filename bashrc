@@ -71,11 +71,16 @@ source /usr/local/share/gem_home/gem_home.sh
 export DISABLE_SPRING=1
 
 ################################################################################
+# JavaScript
+
+export NVM_DIR="$HOME/.nvm"
+. "$(brew --prefix nvm)/nvm.sh"
+
+################################################################################
 # Instructure
 
 alias bridge="cd $HOME/Code/bridge && chruby \$(cat .ruby-version) && gem_home . && export PATH=\$(pwd)/bin:\$PATH"
 
-export NVM_DIR="/Users/ddorman/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+export VAULT_ADDR=https://vault.insops.net
