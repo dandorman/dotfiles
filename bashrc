@@ -4,9 +4,9 @@ export CLICOLOR=1
 export EDITOR=vim
 export TERM_ITALICS=true
 
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-  . $(brew --prefix)/etc/bash_completion
-fi
+for f in $(brew --prefix)/etc/bash_completion.d/*; do
+  source $f
+done
 
 ################################################################################
 # Aliases
@@ -22,13 +22,6 @@ export HISTFILESIZE=1000000
 export HISTIGNORE="bg:fg:history:jobs:ls:git status:git st:git s:git diff:git d"
 export HISTSIZE=1000000
 export HISTTIMEFORMAT="%F %T "
-
-################################################################################
-# Git
-
-if [ -f $HOME/.git-prompt.sh ]; then
-  source $HOME/.git-prompt.sh
-fi
 
 ################################################################################
 # Prompt
