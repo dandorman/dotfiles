@@ -86,6 +86,4 @@ alias insops="eval \$(vaulted env insops)"
 alias inseng="eval \$(vaulted env inseng)"
 alias inscg="eval \$(vaulted env cg)"
 
-bcq() { ssh jump.prod.us-east-1.insops.net "psql -U \$( whoami )-ro -h bouncer.bridge-prod.insops.net cluster1 -qAtXF\\| -c \"select elapsed_time, xact_time, usename, state, substr(replace(query,'\\n',' '),0,100) from dba.current_queries order by elapsed_time desc\"" |column -s\| -t; }
-
 export VAULT_ADDR=https://vault.insops.net
