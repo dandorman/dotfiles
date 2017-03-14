@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+set -e
+
+# Hot corners
+# Possible values:
+#  0: no-op
+#  2: Mission Control
+#  3: Show application windows
+#  4: Desktop
+#  5: Start screen saver
+#  6: Disable screen saver
+#  7: Dashboard
+# 10: Put display to sleep
+# 11: Launchpad
+# 12: Notification Center
+# Top right screen corner → Start screen saver
+defaults write com.apple.dock wvous-tr-corner -int 5
+
+# Enable three-finger drag
+defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool true
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerDrag -bool true
+
+# Configure screen saver
+name=Aerial
+file="$HOME/Library/Screen Savers/$name.saver"
+if [ -e "$file" ]; then
+  defaults -currentHost write com.apple.screensaver moduleDict "{ moduleName = \"$name\"; path = \"$file\"; type = 0; }"
+fi
