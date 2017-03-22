@@ -1,5 +1,4 @@
 "=plugin cespare/vim-toml
-"=plugin endel/vim-github-colorscheme
 "=plugin gabesoft/vim-ags
 "=plugin guns/vim-clojure-static
 "=plugin guns/vim-sexp
