@@ -4,9 +4,8 @@ export CLICOLOR=1
 export EDITOR=vim
 export TERM_ITALICS=true
 
-for f in $(brew --prefix)/etc/bash_completion.d/*; do
-  source $f
-done
+[ -f "$(brew --prefix)/etc/bash_completion" ] \
+  && source "$(brew --prefix)/etc/bash_completion"
 
 ################################################################################
 # Aliases
