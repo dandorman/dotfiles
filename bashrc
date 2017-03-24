@@ -81,8 +81,5 @@ fi
 # Instructure
 
 alias bridge="cd $HOME/Code/bridge && chruby \$(cat .ruby-version) && gem_home . && nvm use > /dev/null && export PATH=\$(pwd)/bin:\$PATH"
-alias insops="eval \$(vaulted env insops)"
-alias inseng="eval \$(vaulted env inseng)"
-alias inscg="eval \$(vaulted env cg)"
 
 export VAULT_ADDR=https://vault.insops.net
