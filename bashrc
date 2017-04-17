@@ -83,3 +83,21 @@ fi
 alias bridge="cd $HOME/Code/bridge && chruby \$(cat .ruby-version) && gem_home . && nvm use > /dev/null && export PATH=\$(pwd)/bin:\$PATH"
 
 export VAULT_ADDR=https://vault.insops.net
+
+# Sometimes Vaulted's session-token stuff just doesn't work. This strips its
+# environment down to AWS_ACCESS_KEY and AWS_SECRET_ACCESS_KEY, with those
+# values set to the explicit values stored in Vaulted.
+function raw_vaulted {
+  if [[ -z $VAULTED_ENV ]]; then
+    echo 'No $VAULTED_ENV set'
+    return 1
+  fi
+
+  for var in AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY AWS_SESSION_TOKEN AWS_SECURITY_TOKEN; do
+    unset $var
+  done
+
+  local vaulted_dump=$(vaulted dump $VAULTED_ENV)
+  export AWS_ACCESS_KEY_ID=$(echo $vaulted_dump | jq -r .aws_key.id)
+  export AWS_SECRET_ACCESS_KEY=$(echo $vaulted_dump | jq -r .aws_key.secret)
+}
