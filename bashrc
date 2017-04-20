@@ -1,7 +1,7 @@
 shopt -s checkwinsize cmdhist globstar histappend
 
 export CLICOLOR=1
-export EDITOR=vim
+export EDITOR=nvim
 export TERM_ITALICS=true
 
 [ -f "$(brew --prefix)/etc/bash_completion" ] \
