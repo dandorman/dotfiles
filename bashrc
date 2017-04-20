@@ -11,6 +11,7 @@ export TERM_ITALICS=true
 # Aliases
 
 alias bx="bundle exec"
+alias ls="ls --color=auto"
 alias venv=". .venv/bin/activate"
 
 ################################################################################
