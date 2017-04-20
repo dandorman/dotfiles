@@ -102,3 +102,5 @@ function raw_vaulted {
   export AWS_ACCESS_KEY_ID=$(echo $vaulted_dump | jq -r .aws_key.id)
   export AWS_SECRET_ACCESS_KEY=$(echo $vaulted_dump | jq -r .aws_key.secret)
 }
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

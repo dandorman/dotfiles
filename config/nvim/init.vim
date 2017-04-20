@@ -1,6 +1,5 @@
 " plugins
 
-
 call plug#begin("$HOME/.local/share/nvim/plugged")
 
 Plug 'gabesoft/vim-ags'
@@ -8,12 +7,12 @@ Plug 'guns/vim-clojure-static'
 Plug 'guns/vim-sexp'
 Plug 'jasonlong/vim-textobj-css'
 Plug 'joshdick/onedark.vim'
+Plug 'junegunn/fzf', { 'dir': '$HOME/.local/share/fzf', 'do': './install --all' }
 Plug 'kana/vim-textobj-user'
 Plug 'morhetz/gruvbox'
 Plug 'nelstrom/vim-mac-classic-theme'
 Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'sheerun/vim-polyglot'
-Plug 'thoughtbot/pick.vim'
 Plug 'tommcdo/vim-exchange'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
@@ -86,9 +85,6 @@ nnoremap <Leader><Leader> <C-^>
 nnoremap <Leader>ev :vsplit $MYVIMRC<CR>
 nnoremap <Leader>sv :source $MYVIMRC<CR>
 
-" grep word under cursor
-nnoremap K :Ags<CR>
-
 " search
 nnoremap <Leader>g :Ag<SPACE>
 
@@ -96,13 +92,8 @@ nnoremap <Leader>g :Ag<SPACE>
 nnoremap <Leader>r :execute "!clear && rspec %\\:" . line(".")<CR>
 nnoremap <Leader>R :execute "!clear && rspec %"<CR>
 
-" pick.vim
-let g:pick_executable="pick -X"
-nnoremap <Leader>p :call PickFile()<CR>
-nnoremap <Leader>s :call PickFileSplit()<CR>
-nnoremap <Leader>v :call PickFileVerticalSplit()<CR>
-nnoremap <Leader>t :call PickFileTab()<CR>
-nnoremap <Leader>b :call PickBuffer()<CR>
+" fuzzy finding
+nnoremap <Leader>p :FZF<CR>
 
 " extract let
 nnoremap <Leader>l :s/\(\w\+\)\s*=\s*\(.*\)$/let(:\1) { \2 }<CR>
