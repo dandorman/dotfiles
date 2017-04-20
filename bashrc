@@ -1,6 +1,7 @@
 shopt -s checkwinsize cmdhist globstar histappend
 
 export CLICOLOR=1
+source <(dircolors)
 export EDITOR=nvim
 export TERM_ITALICS=true
 
