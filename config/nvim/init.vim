@@ -1,42 +1,38 @@
-"=plugin cespare/vim-toml
-"=plugin gabesoft/vim-ags
-"=plugin guns/vim-clojure-static
-"=plugin guns/vim-sexp
-"=plugin jasonlong/vim-textobj-css
-"=plugin jelera/vim-javascript-syntax
-"=plugin kana/vim-textobj-user
-"=plugin morhetz/gruvbox
-"=plugin nelstrom/vim-mac-classic-theme
-"=plugin nelstrom/vim-textobj-rubyblock
-"=plugin rust-lang/rust.vim
-"=plugin thoughtbot/pick.vim
-"=plugin tommcdo/vim-exchange
-"=plugin tpope/vim-commentary
-"=plugin tpope/vim-endwise
-"=plugin tpope/vim-eunuch
-"=plugin tpope/vim-fireplace
-"=plugin tpope/vim-fugitive
-"=plugin tpope/vim-rails
-"=plugin tpope/vim-repeat
-"=plugin tpope/vim-rsi
-"=plugin tpope/vim-sensible
-"=plugin tpope/vim-sexp-mappings-for-regular-people
-"=plugin tpope/vim-sleuth
-"=plugin tpope/vim-surround
-"=plugin tpope/vim-vinegar
-"=plugin vim-ruby/vim-ruby
+" plugins
 
-set nocompatible
-filetype off
 
-syntax on
-filetype plugin indent on
+call plug#begin("$HOME/.local/share/nvim/plugged")
+
+Plug 'gabesoft/vim-ags'
+Plug 'guns/vim-clojure-static'
+Plug 'guns/vim-sexp'
+Plug 'jasonlong/vim-textobj-css'
+Plug 'joshdick/onedark.vim'
+Plug 'kana/vim-textobj-user'
+Plug 'morhetz/gruvbox'
+Plug 'nelstrom/vim-mac-classic-theme'
+Plug 'nelstrom/vim-textobj-rubyblock'
+Plug 'sheerun/vim-polyglot'
+Plug 'thoughtbot/pick.vim'
+Plug 'tommcdo/vim-exchange'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-fireplace'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-rsi'
+Plug 'tpope/vim-sexp-mappings-for-regular-people'
+Plug 'tpope/vim-sleuth'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-vinegar'
+
+call plug#end()
 
 " settings
 
-set backupdir=$HOME/.vimbackup,.
 set cursorline
-set directory=$HOME/.vimswap,.
 set formatoptions=croqwanl
 set gdefault
 set hidden
@@ -120,9 +116,5 @@ nnoremap <Leader>< :tabp<CR>
 " tap 'n' inspect
 nnoremap <Leader>i a.tap { \|o\| warn "#{o.inspect}" }<ESC>F#
 
-" local overrides
-
-let s:local_config = $HOME . "/.vimrc.local"
-if filereadable(s:local_config)
-  execute "source " . s:local_config
-endif
+" color scheme
+colorscheme onedark
