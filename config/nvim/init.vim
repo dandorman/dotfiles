@@ -35,6 +35,7 @@ set cursorline
 set formatoptions=croqwanl
 set gdefault
 set hidden
+set nohlsearch
 set list listchars=tab:»·,trail:·
 set smartcase
 set visualbell
@@ -51,7 +52,7 @@ command! -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 
 " autocommands
 
-autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+autocmd! BufReadPost ?* if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
 function! TrimWhiteSpace()
   let l:cursor = getpos(".")
@@ -59,15 +60,15 @@ function! TrimWhiteSpace()
   call setpos('.', l:cursor)
 endfunction
 
-" autocmd BufWritePre * :call TrimWhiteSpace()
-" autocmd FileWritePre * :call TrimWhiteSpace()
+" autocmd! BufWritePre ?* :call TrimWhiteSpace()
+" autocmd! FileWritePre ?* :call TrimWhiteSpace()
 
-autocmd BufWinEnter *.* silent loadview
-autocmd BufWinLeave *.* mkview
+autocmd! BufWinEnter ?* silent! loadview
+autocmd! BufWinLeave ?* mkview
 
 augroup filetype_markdown
   autocmd!
-  autocmd BufNewFile,BufReadPost *.md setlocal filetype=markdown
+  autocmd BufNewFile,BufReadPost ?*.md setlocal filetype=markdown
 augroup END
 
 " mappings
