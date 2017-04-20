@@ -11,6 +11,7 @@ export TERM_ITALICS=true
 # Aliases
 
 alias bx="bundle exec"
+alias venv=". .venv/bin/activate"
 
 ################################################################################
 # History
