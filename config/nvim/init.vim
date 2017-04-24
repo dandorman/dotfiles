@@ -8,6 +8,7 @@ function! BuildComposer(info)
   endif
 endfunction
 
+Plug 'clojure-vim/nvim-parinfer.js'
 Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
 Plug 'gabesoft/vim-ags'
 Plug 'guns/vim-clojure-static'
@@ -19,6 +20,7 @@ Plug 'kana/vim-textobj-user'
 Plug 'morhetz/gruvbox'
 Plug 'nelstrom/vim-mac-classic-theme'
 Plug 'nelstrom/vim-textobj-rubyblock'
+Plug 'neovim/node-host', { 'do': 'npm install' }
 Plug 'sheerun/vim-polyglot'
 Plug 'tommcdo/vim-exchange'
 Plug 'tpope/vim-commentary'
@@ -33,6 +35,7 @@ Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar'
+Plug 'vim-airline/vim-airline'
 
 call plug#end()
 
@@ -109,6 +112,18 @@ nnoremap <Leader>< :tabp<CR>
 " ruby stuff
 " tap 'n' inspect
 nnoremap <Leader>i a.tap { \|o\| warn "#{o.inspect}" }<ESC>F#
+
+" clojure stuff
+" toggle parinfer mode
+function! ToggleParinferMode()
+  if g:parinfer_mode == 'indent'
+    let g:parinfer_mode = 'paren'
+  else
+    let g:parinfer_mode = 'indent'
+  end
+endfunction
+
+nnoremap <Leader>k :call ToggleParinferMode()<CR>
 
 " color scheme
 colorscheme onedark
