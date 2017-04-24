@@ -2,6 +2,13 @@
 
 call plug#begin("$HOME/.local/share/nvim/plugged")
 
+function! BuildComposer(info)
+  if a:info.status != 'unchanged' || a:info.force
+    !cargo build --release
+  endif
+endfunction
+
+Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
 Plug 'gabesoft/vim-ags'
 Plug 'guns/vim-clojure-static'
 Plug 'guns/vim-sexp'
@@ -65,11 +72,6 @@ endfunction
 
 autocmd! BufWinEnter ?* silent! loadview
 autocmd! BufWinLeave ?* mkview
-
-augroup filetype_markdown
-  autocmd!
-  autocmd BufNewFile,BufReadPost ?*.md setlocal filetype=markdown
-augroup END
 
 " mappings
 
